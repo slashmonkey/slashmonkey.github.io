@@ -98,43 +98,7 @@
 </style>
 
 <div class="projects-container">
-    <!-- Professional Projects Section -->
-    <section class="project-section">
-        <h2>Professional Projects</h2>
-        <div class="projects-list">
-            {{- range where .Site.RegularPages "Params.category" "professional" }}
-            {{- if eq .Section "projects" }}
-            <article class="project-card">
-                {{- if .Params.image }}
-                <div class="project-image">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
-                </div>
-                {{- end }}
-                <div class="project-content">
-                    <h3 class="project-title">
-                        <a href="{{ .Permalink }}">{{ .Title }}</a>
-                    </h3>
-                    {{- if .Params.projectYear }}
-                    <div class="project-year">{{ .Params.projectYear }}</div>
-                    {{- else if .Date }}
-                    <div class="project-year">{{ .Date.Format "2006" }}</div>
-                    {{- end }}
-                    <div class="project-description">
-                        {{ .Params.description | default .Summary }}
-                    </div>
-                    {{- if or .Params.tags .Date }}
-                    <div class="project-meta">
-                        {{- if .Params.tags }}
-                        Tags: {{ delimit .Params.tags ", " }}
-                        {{- end }}
-                    </div>
-                    {{- end }}
-                </div>
-            </article>
-            {{- end }}
-            {{- end }}
-        </div>
-    </section>
+
 
     <!-- Personal Projects Section -->
     <section class="project-section">
