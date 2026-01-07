@@ -10,11 +10,7 @@ tags: ["game", "puzzle", "mobile", "personal"]
 description: "A relaxing puzzle game where you must connect all points with a single continuous line."
 ---
 
-## About 1Line
-
-
-
-1Line is a minimalist puzzle game that challenges your spatial reasoning. The goal is simple but addictive: connect all the dots on the screen with a single, continuous line without lifting your finger or retracing your path.
+1Line is a puzzle game that challenges your spatial reasoning. The goal is simple but addictive: connect all the dots on the screen with a single, continuous line without lifting your finger or retracing your path.
 
 <style>
 .project-gallery img {

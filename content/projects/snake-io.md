@@ -10,9 +10,6 @@ tags: ["game", "arcade", "personal"]
 description: "A classic Snake.io game featuring local AI mechanics and smooth controls."
 ---
 
-## About Snake.io
-
-
 
 Snake.io is a fast-paced arcade game where players compete to become the longest snake. Navigate the arena, eat food to grow, and avoid colliding with other snakes or the boundaries.
 

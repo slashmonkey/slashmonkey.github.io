@@ -29,8 +29,6 @@ description: "A challenging puzzle platformer game featuring unique mechanics an
 
 <div class="project-gallery">
 
-## Gallery
-
 ### Gameplay
 <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
   <img src="/images/AniWOW/level11.png" alt="Level 11" style="max-width: 300px; width: 100%; height: auto; border-radius: 8px; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);" />
