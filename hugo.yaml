@@ -1,6 +1,6 @@
 baseURL: https://example.org/
 languageCode: en-us
-title: GameDev's Blog
+title: A GameDev's Blog
 theme: ["PaperMod"]
 
 markup:
@@ -10,9 +10,12 @@ markup:
 relativeURLs: true
 
 params:
+  homeInfoParams:
+    Title: "Hi there 👋"
+    Content: "I write down my work and thoughts here."
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: GameDev's Blog
-  description: "GameDev's Blog"
+  title: A GameDev's Blog
+  description: "A GameDev's Blog"
   keywords: [Blog, Portfolio, PaperMod]
   author: Me
   # author: ["Me", "You"] # multiple authors
