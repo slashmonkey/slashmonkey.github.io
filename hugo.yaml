@@ -1,0 +1,58 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: GameDev's Blog
+theme: ["PaperMod"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: GameDev's Blog
+  description: "GameDev's Blog"
+  keywords: [Blog, Portfolio, PaperMod]
+  author: Me
+  # author: ["Me", "You"] # multiple authors
+  images: ["<link or path of image for opengraph, twitter-cards>"]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: false
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  showtoc: false
+  tocopen: false
+
+menu:
+  main:
+    - identifier: Archives
+      name: Archives
+      url: /archives/
+      weight: 5
+    - identifier: Projects
+      name: Projects
+      url: /projects/
+      weight: 7
+    - identifier: Tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    #- identifier: Resume
+    #  name: Resume
+    #  url: /resume/
+    #  weight: 30

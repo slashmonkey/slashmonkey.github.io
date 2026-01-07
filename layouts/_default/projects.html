@@ -1,0 +1,178 @@
+{{- define "main" }}
+
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Description }}
+    <div class="post-description">{{ .Description }}</div>
+    {{- end }}
+</header>
+
+<style>
+    .projects-container {
+        margin: 2rem 0;
+    }
+
+    .project-section {
+        margin-bottom: 4rem;
+    }
+
+    .project-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid var(--border);
+    }
+
+    .project-card {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        background: var(--entry);
+    }
+
+    .project-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .project-image {
+        flex-shrink: 0;
+        width: 200px;
+        height: 150px;
+        overflow: hidden;
+        border-radius: 4px;
+    }
+
+    .project-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .project-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .project-title a {
+        color: var(--primary);
+        text-decoration: none;
+    }
+
+    .project-title a:hover {
+        text-decoration: underline;
+    }
+
+    .project-description {
+        color: var(--secondary);
+        line-height: 1.6;
+    }
+
+    .project-meta {
+        margin-top: auto;
+        padding-top: 1rem;
+        font-size: 0.9rem;
+        color: var(--secondary);
+    }
+
+    @media (max-width: 768px) {
+        .project-card {
+            flex-direction: column;
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+        }
+    }
+</style>
+
+<div class="projects-container">
+    <!-- Professional Projects Section -->
+    <section class="project-section">
+        <h2>Professional Projects</h2>
+        <div class="projects-list">
+            {{- range where .Site.RegularPages "Params.category" "professional" }}
+            {{- if eq .Section "projects" }}
+            <article class="project-card">
+                {{- if .Params.image }}
+                <div class="project-image">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+                </div>
+                {{- end }}
+                <div class="project-content">
+                    <h3 class="project-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    {{- if .Params.projectYear }}
+                    <div class="project-year">{{ .Params.projectYear }}</div>
+                    {{- else if .Date }}
+                    <div class="project-year">{{ .Date.Format "2006" }}</div>
+                    {{- end }}
+                    <div class="project-description">
+                        {{ .Params.description | default .Summary }}
+                    </div>
+                    {{- if or .Params.tags .Date }}
+                    <div class="project-meta">
+                        {{- if .Params.tags }}
+                        Tags: {{ delimit .Params.tags ", " }}
+                        {{- end }}
+                    </div>
+                    {{- end }}
+                </div>
+            </article>
+            {{- end }}
+            {{- end }}
+        </div>
+    </section>
+
+    <!-- Personal Projects Section -->
+    <section class="project-section">
+        <h2>Personal Projects</h2>
+        <div class="projects-list">
+            {{- range where .Site.RegularPages "Params.category" "personal" }}
+            {{- if eq .Section "projects" }}
+            <article class="project-card">
+                {{- if .Params.image }}
+                <div class="project-image">
+                    <img src="{{ .Params.image }}" alt="{{ .Title }}" loading="lazy">
+                </div>
+                {{- end }}
+                <div class="project-content">
+                    <h3 class="project-title">
+                        <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    </h3>
+                    {{- if .Params.projectYear }}
+                    <div class="project-year">{{ .Params.projectYear }}</div>
+                    {{- else if .Date }}
+                    <div class="project-year">{{ .Date.Format "2006" }}</div>
+                    {{- end }}
+                    <div class="project-description">
+                        {{ .Params.description | default .Summary }}
+                    </div>
+                    {{- if or .Params.tags .Date }}
+                    <div class="project-meta">
+                        {{- if .Params.tags }}
+                        Tags: {{ delimit .Params.tags ", " }}
+                        {{- end }}
+                    </div>
+                    {{- end }}
+                </div>
+            </article>
+            {{- end }}
+            {{- end }}
+        </div>
+    </section>
+</div>
+
+{{- end }}{{/* end main */}}
