@@ -9,7 +9,7 @@ tags: ["game", "puzzle", "personal"]
 description: "A challenging puzzle platformer game featuring unique mechanics and engaging level design."
 ---
 
-**Role: Programmer and Designer**
+
 
 <style>
 .project-gallery img {
@@ -62,6 +62,8 @@ The built-in level editor allows for creating custom levels with ease.
 The game features a custom-built level editor and tile map system, allowing for infinite level creation possibilities.
 
 Built with C# and Unity.
+
+**Role: Programmer and Designer**
 
 ## Gameplay Video
 
